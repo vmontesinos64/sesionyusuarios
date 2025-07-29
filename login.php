@@ -9,7 +9,7 @@ if (isset($_SESSION['usuario'])) {
     exit();
 }
 
-require_once "config/db.php";
+//require_once "config/db.php";
 $error = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

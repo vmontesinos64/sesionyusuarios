@@ -23,23 +23,11 @@ require_once $_SESSION["ROOT_PATH"] . "/includes/auth.php";
 </head>
 
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mi Plataforma</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="modules/usuarios/listar.php">Usuarios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="logout.php">Salir</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="registro.php">Registro</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Barras de menú -->
+    <?php
+    require_once $_SESSION["ROOT_PATH"] . "/includes/navbar.php";
+    require_once $_SESSION["ROOT_PATH"] . "/includes/sidebar.php";
+    ?>
 
     <!-- Contenido principal -->
     <div class="container mt-5">
@@ -61,6 +49,10 @@ require_once $_SESSION["ROOT_PATH"] . "/includes/auth.php";
             'bg-primary'
         );
     </script>
+    <!-- scripts de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- script del menu sidebar -->
+    <script src="assets/menu.js"></script>
 </body>
 
 </html>
